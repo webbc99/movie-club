@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Club</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    Hello, World! Test
+    <h1>Movie Selector!</h1>
+
+    <p>We provide names of movies, and the application returns a randomly selected movie out of the provided names.</p>
+
+    <ul>
+        <li>Single text box to type the names</li>
+        <li>List that shows movies we have entered</li>
+        <li>A button to say go! or randomize</li>
+        <li>Some way of displaying the selected movie</li>
+    </ul>
+
+    <form action="#">
+        <label for="movie-name">Movie Name:</label>
+        <input id="movie-name" name="movie-name" type="text">
+        <!-- We have a button here, javascript will handle the behaviour, there is no backend at this stage
+        To be replaced with a submit input later -->
+        <input id="movie-name-submit-button" type="button" value="Submit">
+    </form>
+
+    <ul id="movie-list">
+        <!-- To be populated via the text field -->
+    </ul>
+
+    <button id="randomize-button">Randomize!</button>
+
+    <div id="movie-result"></div>
+
+    <script src="main.js"></script>
 </body>
 </html>
