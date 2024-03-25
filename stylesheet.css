@@ -1,3 +1,8 @@
 body {
     background-color: steelblue;
 }
+
+.selected-movie {
+    color: red;
+    background-color: white;
+}

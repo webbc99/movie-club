@@ -18,16 +18,21 @@
         <li>Some way of displaying the selected movie</li>
     </ul>
 
-    <form action="#">
+    <!-- <form action="#">
         <label for="movie-name">Movie Name:</label>
         <input id="movie-name" name="movie-name" type="text">
-        <!-- We have a button here, javascript will handle the behaviour, there is no backend at this stage
-        To be replaced with a submit input later -->
         <input id="movie-name-submit-button" type="button" value="Submit">
-    </form>
+    </form> -->
+
+    <label for="movie-name">Movie Name:</label>
+    <input id="movie-name" name="movie-name" type="text">
+    <button id="movie-name-submit-button">Submit</button>
 
     <ul id="movie-list">
         <!-- To be populated via the text field -->
+        <!-- html for a tick is &#10003; -->
+        <li class="checked">Blade Runner</li>
+        <li>The Game</li>
     </ul>
 
     <button id="randomize-button">Randomize!</button>
