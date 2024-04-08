@@ -1,8 +1,39 @@
 body {
     background-color: steelblue;
+    margin: 0
 }
 
 .selected-movie {
     color: red;
     background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 1px 8px #ddd;
+    background-color: white;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.5s ease 0s;
+}
+
+header a:hover {
+    color: #b2bfdb;
+}
+
+#nav-title {
+    margin-right: auto;
+    font-size: 1.5em;
 }
