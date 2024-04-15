@@ -24,7 +24,7 @@ for (i = 0; i < movies.length; i++) {
 var closeButtons = document.getElementsByClassName("close");
 for (i = 0; i < closeButtons.length; i++) {
     closeButtons[i].addEventListener("click", function() {
-        this.parentElement.style.display = "none";
+        this.parentElement.remove();
         // Remove the movie from the array
         var index = movieArray.indexOf(this.parentElement.innerText);
         movieArray.splice(index, 1);
@@ -38,7 +38,7 @@ function getRandomMovie() {
     for (i = 0; i < movieList.children.length; i++) {
         movieList.children[i].classList.remove("selected-movie");
     }
-    movieList.children[Math.floor(Math.random() * movieList.children.length)].classList.add("selected-movie");
+    movieList.children[Math.floor(Math.random() * movieArray.length)].classList.add("selected-movie");
 }
 
 // Allow users to add new movies either by clicking Submit or hitting Enter
@@ -75,7 +75,7 @@ function newMovie() {
     var closeButtons = document.getElementsByClassName("close");
     for (i = 0; i < closeButtons.length; i++) {
         closeButtons[i].addEventListener("click", function (){
-            this.parentElement.style.display = "none";
+            this.parentElement.remove();
             // Remove the movie from the array
             var index = movieArray.indexOf(this.parentElement.innerText);
             movieArray.splice(index, 1);
