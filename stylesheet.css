@@ -4,8 +4,7 @@ body {
 }
 
 .selected-movie {
-    color: red;
-    background-color: white;
+    color: white;
 }
 
 header {
@@ -36,4 +35,15 @@ header a:hover {
 #nav-title {
     margin-right: auto;
     font-size: 1.5em;
+}
+
+.close {
+    margin-left: 15px;
+    padding: 3px 3px 3px 3px;
+    color: white;
+}
+  
+.close:hover {
+    color: #f44336;
+    cursor: pointer;
 }
