@@ -17,9 +17,13 @@ function init() {
 
 // Add initial list items to the array
 function addExistingMoviesToArray() {
-    for (i = 0; i < movieList.children.length; i++) {
-        movieArray.push(movieList.children[i].innerText);
-    }
+    // for (i = 0; i < movieList.children.length; i++) {
+    //     movieArray.push(movieList.children[i].innerText);
+    // }
+    // Example of creating an Array from the HtmlCollection, so we can use forEach instead of for
+    Array.from(movieList.children).forEach((movie) => {
+        movieArray.push(movie.innerText);
+    })
 }
 
 // Add the close button to the movie
