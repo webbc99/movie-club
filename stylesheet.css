@@ -5,6 +5,7 @@ body {
 
 .selected-movie {
     color: white;
+    background-color: grey
 }
 
 header {

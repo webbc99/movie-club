@@ -33,7 +33,7 @@ function addCloseButtonsToExistingMovies() {
         var text = document.createTextNode("\u00D7");
         span.className = "close";
         span.appendChild(text);
-        movies[i].appendChild(span);
+        movies[i].parentElement.appendChild(span);
     }
 }
 
@@ -56,9 +56,9 @@ randomizeButton.addEventListener("click", getRandomMovie);
 
 function getRandomMovie() {
     for (i = 0; i < movieList.children.length; i++) {
-        movieList.children[i].classList.remove("selected-movie");
+        movieList.children[i].children[0].classList.remove("selected-movie");
     }
-    movieList.children[Math.floor(Math.random() * movieList.children.length)].classList.add("selected-movie");
+    movieList.children[Math.floor(Math.random() * movieList.children.length)].children[0].classList.add("selected-movie");
 }
 
 // Allow users to add new movies either by clicking Submit or hitting Enter
@@ -71,10 +71,12 @@ movieName.addEventListener("keydown", (e) => {
 
 function newMovie() {
     var li = document.createElement("li");
-    li.className = "movie";
     var inputValue = movieName.value;
     var text = document.createTextNode(inputValue);
-    li.appendChild(text);
+    var movieNameSpan = document.createElement("span");
+    movieNameSpan.className = "movie"
+    movieNameSpan.appendChild(text);
+    li.appendChild(movieNameSpan);
 
     if (inputValue === "") {
         alert("Movie name cannot be blank");
