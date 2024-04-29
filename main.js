@@ -104,3 +104,58 @@ function newMovie() {
     
     movieName.value = "";
 }
+
+// Movie: id, name, genres, runtime, overall_rating
+// [1, 2]
+
+// Genres: id, name
+
+// User: id, username, password, display name
+
+// Ratings: id, rating_value, movie_id
+
+let movieObjectArray = [];
+class Movie {
+    constructor(id, name, genres, runtime) {
+        this.id = id;
+        this.name = name;
+        this.genres = genres;
+        this.runtime = runtime;
+        movieObjectArray.push(this);
+    }
+    overallRating() {
+        return("10");
+    }
+    userFriendlyRuntime() {
+        hours = Math.floor(this.runtime / 60);
+        minutes = this.runtime % 60;
+        return(`${hours}h ${minutes}m`);
+    }
+    genreNames() {
+        let output = []
+        genresObjectArray.forEach((genre) => {
+            if(this.genres.includes(genre.id)) {
+                output.push(genre.name);
+            }
+        })
+        return(output);
+    }
+
+}
+
+const warGames = new Movie(1, "WarGames", [1, 2, 3], 152);
+
+let genresObjectArray = [];
+class Genre {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+        genresObjectArray.push(this);
+    }
+}
+
+const sciFi = new Genre(1, "Sci-Fi");
+const action = new Genre(2, "Action");
+const drama = new Genre(3, "Drama");
+const horror = new Genre(4, "Horror");
+const thriller = new Genre(5, "Thriller");
